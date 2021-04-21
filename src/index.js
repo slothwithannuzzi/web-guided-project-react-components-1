@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-
+import Playground from './components/Playground'
 /*
 💥💥💥 Rules when DECLARING a React component 💥💥💥
   - Name is capitalized
@@ -22,14 +22,24 @@ import { render } from 'react-dom'
 */
 
 function App(props) {
+  const happy = true;
   return (
     <div className='container'>
       <h1>Welcome to React, Web {props.cohort}</h1>
+      {/* use {} brackets to add a js script to the JSX */}
+      {happy ? <div>I am having a great day!</div> : <div> Having a bady day!</div>}
+      <Playground></Playground>
     </div>
   )
 }
 
+
+//THIS IS JSX
+const h1 = <h1>Welcome WebPT28</h1>
+
+
+//ReactDom.render method renders our react app on the DOM
 render(
-  <App cohort='37' />,
+  <App cohort='PT28' />,
   document.querySelector('#root')
 )
